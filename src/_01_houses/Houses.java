@@ -18,26 +18,38 @@ public class Houses {
 	}
 	public void house(String height) {
 		int h = 0;
+		int r = 0;
+		int r2 = 0;
 		if(height.equalsIgnoreCase("tall")){
 			h=250;
+			r=90;
+			r2=0;
 		}
 		if(height.equalsIgnoreCase("medium")){
 			h=120;
+			r=45;
+			r2=90;
+		
 		}
 		if(height.equalsIgnoreCase("short")){
 			h=60;
+			r=45;
+			r2=90;
 		}
+		
 		hal.hide();
 		hal.penDown();
 		hal.setRandomPenColor();
 		hal.setSpeed(100);
 		hal.move(h);
-		hal.turn(90);
+		hal.turn(r);
 		hal.move(15);
-		hal.turn(90);
+		hal.turn(r2);
+		hal.move(15);
+		hal.turn(r);
 		hal.move(h);
 		hal.turn(-90);
-		hal.setPenColor(0, 255, 80);
+		hal.setPenColor(100, 255, 100);
 		hal.move(10);
 		hal.turn(-90);
 		//havent finished processing string height 
