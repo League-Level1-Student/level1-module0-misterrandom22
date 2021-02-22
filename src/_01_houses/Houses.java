@@ -1,22 +1,33 @@
 package _01_houses;
 
+import java.util.Random;
+
 import org.jointheleague.graphical.robot.Robot;
 
 public class Houses {
 	static Robot hal = new Robot();
 	public void run() {
 		
+Random random1 = new Random();
+		for (int i=0; i<9; i++) {
+			int random2 = random1.nextInt(3);
+			if(random2 == 0) {
+				house("tall");
+			}
+			else if(random2 == 1) {
+				house("medium");
+			}
+			else if(random2 == 2) {
+				house("short");
+			}
 
-		for (int i=0; i<10; i++) {
-			house("tall");
-			house("medium");
-			house("short");
 		}
 
 		
 		
 	}
 	public void house(String height) {
+		
 		int h = 0;
 		int r = 0;
 		int r2 = 0;
